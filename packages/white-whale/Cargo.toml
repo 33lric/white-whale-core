@@ -1,13 +1,13 @@
 [package]
 name = "white-whale"
-version = "1.1.0"
+version = "1.2.0"
 edition.workspace = true
-authors = ["Kerber0x <kerber0x@protonmail.com>"]
+authors = ["Kerber0x <kerber0x@protonmail.com>, Edward E <e3lris@outlook.com>"]
 description = "Common White Whale types and utils"
 license.workspace = true
 repository.workspace = true
 homepage.workspace = true
-documentation = "https://whitewhale.money"
+documentation.workspace = true
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -15,7 +15,12 @@ documentation = "https://whitewhale.money"
 # for quicker tests, cargo test --lib
 # for more explicit tests, cargo test --features=backtraces
 backtraces = ["cosmwasm-std/backtraces"]
+default = ["dex", "flashloans"]
 injective = []
+dex = []
+flashloans = []
+rewards = []
+bonding = []
 
 [dependencies]
 cosmwasm-std.workspace = true
@@ -25,3 +30,4 @@ cosmwasm-schema.workspace = true
 cw20.workspace = true
 protobuf.workspace = true
 uint.workspace = true
+
